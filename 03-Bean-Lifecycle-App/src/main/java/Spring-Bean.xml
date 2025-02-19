@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- init-method will call when the object is created for the bean And destroy-method 
+		will call when the object is remove from the container -->
+		<!-- type1  -->
+		<!-- in this we crate methods name start and stop check in motor class  -->
+		<!-- <bean id="motor" class="in.ashokit.beans.Motor" init-method="start" destroy-method="stop" /> -->
+	
+	<!-- Type 2  -->
+	<!-- check in motor class we implements interface of InitializingBean and DisposableBean  and their methods -->
+	<bean id="motor" class="in.ashokit.beans.Motor"  />
+
+
+
+</beans>

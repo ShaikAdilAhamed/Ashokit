@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+  <p th:text="${msg}"></p>
+
+  <form th:action="@{/pro}" th:object="${product}" method="POST">
+    <table>
+      <tr>
+        <td>Product Id</td>
+        <td><input type="text" th:field="*{pid}"/></td>
+         <td th:if="${#fields.hasErrors('pid')}" th:errors="*{pid}"/><!-- if the pid validation is failed then i want to print error -->
+      </tr>                                                                                <!--th:errors="*{pid}  the pid holds the error mssg  -->
+      <tr>
+        <td>Product Name</td>
+        <td><input type="text" th:field="*{pname}"/></td>
+         <td th:if="${#fields.hasErrors('pname')}" th:errors="*{pname}"/><!-- if the pname validation is failed then i want to print error -->
+      </tr>                                                                                <!--th:errors="*{pname}  the pname holds the error mssg  -->
+      <tr>
+        <td>Product Price</td>
+        <td><input type="text" th:field="*{price}"/></td>
+         <td th:if="${#fields.hasErrors('price')}" th:errors="*{price}"/><!-- if the price validation is failed then i want to print error -->
+      </tr>                                                                                <!--th:errors="*{price}  the price holds the error mssg  -->
+      <tr>
+        <td></td>
+        <td><input type="submit" value="submit"/></td>
+      </tr>
+    </table>
+  </form>
+
+</body>
+</html>

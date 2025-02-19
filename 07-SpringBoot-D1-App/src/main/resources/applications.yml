@@ -1,0 +1,10 @@
+spring:
+    datasource:
+        url:
+        username:
+        password:
+        driver-class-name:
+    main:
+        banner-mode: off
+    application:
+        name: app

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- using Annotation -->
+	
+	
+	
+	
+	
+	
+	<bean id="petrolEng" class="in.ashokit.beans.PetrolEngine" autowire-candidate="true"/>
+    <bean id="eng1" class="in.ashokit.beans.DieselEngine" autowire-candidate="false" />
+
+	<!-- Inside car class it got private IEngine eng; eng varible so it will 
+		check eng varible in .xml it got then it will be "eng" varible initialized -->
+	<bean id="car" class="in.ashokit.beans.Car" autowire="byType" />
+
+
+
+	<!-- By Name -->
+	
+	<!-- Inside car class it got private IEngine eng; eng varible so it will 
+		check eng varible in .xml it got then it will be "eng" varible initialized -->
+<!-- <bean id="petrolEng" class="in.ashokit.beans.PetrolEngine" />
+    <bean id="eng" class="in.ashokit.beans.DieselEngine" />
+    <bean id="car" class="in.ashokit.beans.Car" autowire="byType" />
+-->
+
+	<!-- manual wiring example -->
+	<!-- <bean id="petrolEng" class="in.ashokit.beans.PetrolEngine" /> <bean 
+		id="dieselEng" class="in.ashokit.beans.DieselEngine" /> in the below code 
+		manual wiring is working <bean id="car" class="in.ashokit.beans.Car"> <property 
+		name="eng" ref="petrolEng" /> </bean> -->
+
+
+
+</beans>
