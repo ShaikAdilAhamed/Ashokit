@@ -6,7 +6,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableDiscoveryClient  //it should identity and register  the eureka server so we will write this annotsation @EnableDiscoveryClient
+@EnableDiscoveryClient  //it should identity and (register automatically) the eureka server using (port 8761) so we will write this annotsation @EnableDiscoveryClient
 @EnableFeignClients   // for inter service communication we will use this annotation @EnableFeignClients
 public class Application {
 
