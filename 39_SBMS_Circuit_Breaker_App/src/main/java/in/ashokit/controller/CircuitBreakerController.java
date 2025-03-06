@@ -15,5 +15,6 @@ public class CircuitBreakerController {
     @GetMapping("/data")
     public Integer callService() {
         return circuitBreakerService.callExternalService();
+    
     }
 }
