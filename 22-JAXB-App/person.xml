@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<person>
-	<address>
-		<city>HYD</city>
-		<country>India</country>
-		<state>Telengana</state>
-	</address>
-	<email>ashokitschool@gmail.com</email>
-	<gender>Male</gender>
-	<id>101</id>
-	<name>AshokIt</name>
-</person>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><person><address><city>HYD</city><country>India</country><state>Telengana</state></address><email>ashokitschool@gmail.com</email><gender>Male</gender><id>101</id><name>AshokIt</name></person>
