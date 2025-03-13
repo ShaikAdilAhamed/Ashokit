@@ -1,0 +1,14 @@
+
+Run zookeeper:
+zookeeper-server-start.bat zookeeper.properties
+
+Run kafka:
+kafka-server-start.bat server.properties
+
+
+Create a Topic: (manually)
+kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic demo-sbms27-topic
+kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic demo-sbms27-new-topic
+
+List Topics:
+kafka-topics.bat --list --bootstrap-server localhost:9092
