@@ -4,15 +4,24 @@ public class Car {
 
 	private IEngine eng;
 	
-	public void setEng(IEngine eng)
-	{
-		System.out.println("setEng() method call");
-		this.eng=eng;
+	//setter injection
+//	public void setEng(IEngine eng)
+//	{
+//		System.out.println("setEng() method call");
+//		this.eng=eng;
+//	}
+	
+	
+	
+	//constructor injection
+	public Car(IEngine eng) {
+		System.out.println("Car :: Constructor method call");
+		this.eng = eng;
 	}
-	
-	
-	
-	
+
+
+
+
 	public Car() {
 		System.out.println("car :: constructor ");
 	}

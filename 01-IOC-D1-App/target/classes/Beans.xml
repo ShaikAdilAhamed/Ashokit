@@ -16,6 +16,7 @@
 <!-- 	<bean id="dieselEng" class="in.ashokit.beans.DieselEngine" />-->
 
 	<bean id="car" class="in.ashokit.beans.Car">
-		<property name="eng" ref="petrolEng" />
+		<!-- <property name="eng" ref="petrolEng" /> -->
+		<constructor-arg name="eng" ref="petrolEng"/>
 	</bean>
 </beans>
